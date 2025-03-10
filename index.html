@@ -104,30 +104,31 @@
 
     <!-- Carga del script principal -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sidebar = document.getElementById("sidebar");
-            const toggleSidebarBtn = document.getElementById("toggleSidebar");
-            const sidebarTexts = document.querySelectorAll(".sidebar-text");
-            const header = document.getElementById("header");
-            const mainContent = document.getElementById("main-content");
-
-            toggleSidebarBtn.addEventListener("click", function () {
-                sidebar.classList.toggle("collapsed");
-
-                sidebarTexts.forEach(span => {
-                    span.classList.toggle("hidden");
-                });
-
-                // Ajustar la posición del header y contenido principal
-                if (sidebar.classList.contains("collapsed")) {
-                    header.classList.add("sidebar-collapsed");
-                    mainContent.classList.add("sidebar-collapsed");
-                } else {
-                    header.classList.remove("sidebar-collapsed");
-                    mainContent.classList.remove("sidebar-collapsed");
-                }
+    document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.getElementById("sidebar");
+        const toggleSidebarBtn = document.getElementById("toggleSidebar");
+        const sidebarTexts = document.querySelectorAll(".sidebar-text");
+        const header = document.getElementById("header");
+        const mainContent = document.getElementById("main-content");
+    
+        toggleSidebarBtn.addEventListener("click", function () {
+            sidebar.classList.toggle("collapsed");
+    
+            // Ocultar/mostrar todos los textos del sidebar
+            sidebarTexts.forEach(span => {
+                span.classList.toggle("hidden");
             });
+    
+            // Ajustar la posición del header y contenido principal
+            if (sidebar.classList.contains("collapsed")) {
+                header.classList.add("sidebar-collapsed");
+                mainContent.classList.add("sidebar-collapsed");
+            } else {
+                header.classList.remove("sidebar-collapsed");
+                mainContent.classList.remove("sidebar-collapsed");
+            }
         });
+});
     </script>
 </body>
 </html>
