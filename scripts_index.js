@@ -1,14 +1,14 @@
-        document.getElementById('toggleSidebar').addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('w-64');
-            sidebar.classList.toggle('w-20');
+document.getElementById('toggleSidebar').addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('w-64');
+        sidebar.classList.toggle('w-20');
             
-            // Toggle visibility of text in sidebar
-            const spans = sidebar.getElementsByTagName('span');
-            for (let span of spans) {
-                span.classList.toggle('hidden');
-            }
-        });
+        // Toggle visibility of text in sidebar
+        const spans = sidebar.getElementsByTagName('span');
+        for (let span of spans) {
+        span.classList.toggle('hidden');
+        }
+});
 
 // Función para cargar dinámicamente las secciones dentro del index.html
 async function loadPage(page) {
