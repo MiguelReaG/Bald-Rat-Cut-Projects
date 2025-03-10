@@ -1,18 +1,14 @@
 /* ------------------- Estilos generales ------------------- */
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #F5F5F5; /* Fondo claro para contraste */
-    background-image: url('logo.png');
-    background-size: contain;
-    background-position: bottom 5% center;
-    background-repeat: no-repeat;
+    background-color: #F5F5F5; /* Fondo claro */
     margin: 0;
     padding: 0;
 }
 
 /* ------------------- Sidebar ------------------- */
 .sidebar {
-    background: linear-gradient(180deg, #1B3C59, #0E6F66); /* Degradado azul oscuro a verde oscuro */
+    background: linear-gradient(180deg, #1B3C59, #0E6F66); /* Azul oscuro a verde oscuro */
     width: 250px;
     transition: width 0.3s ease-in-out;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
@@ -52,7 +48,7 @@ body {
 }
 
 .sidebar ul li:hover {
-    background-color: rgba(255, 215, 0, 0.2); /* Fondo dorado con transparencia en hover */
+    background-color: rgba(255, 215, 0, 0.3); /* Fondo dorado translúcido */
 }
 
 /* Ocultar el texto cuando el sidebar está colapsado */
