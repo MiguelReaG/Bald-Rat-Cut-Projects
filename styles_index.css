@@ -24,6 +24,12 @@ body {
     width: 60px;
 }
 
+/* Ocultar texto cuando el sidebar está colapsado */
+.sidebar.collapsed .sidebar-text {
+    display: none !important; /* Se oculta completamente */
+    visibility: hidden;
+}
+
 /* Estilos de los botones del Sidebar */
 .sidebar ul {
     list-style: none;
@@ -36,24 +42,32 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
     cursor: pointer;
     color: #FFFFFF; /* Texto en blanco */
     font-weight: bold;
 }
 
+/* Centrar íconos al colapsar el Sidebar */
+.sidebar.collapsed ul li {
+    justify-content: center;
+    padding: 15px 10px; /* Ajustar padding */
+}
+
+/* Ajustar el tamaño de los íconos */
 .sidebar ul li i {
     color: #FFD700; /* Íconos dorados */
     font-size: 18px;
+    transition: transform 0.3s ease-in-out;
 }
 
+.sidebar.collapsed ul li i {
+    transform: scale(1.2); /* Aumentar tamaño para mejor visibilidad */
+}
+
+/* Hover con fondo dorado translúcido */
 .sidebar ul li:hover {
-    background-color: rgba(255, 215, 0, 0.3); /* Fondo dorado translúcido */
-}
-
-/* Ocultar el texto cuando el sidebar está colapsado */
-.sidebar.collapsed .sidebar-text {
-    display: none;
+    background-color: rgba(255, 215, 0, 0.3);
 }
 
 /* ------------------- Navbar ------------------- */
