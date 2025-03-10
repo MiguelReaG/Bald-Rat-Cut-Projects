@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleSidebarBtn.addEventListener("click", function () {
             sidebar.classList.toggle("w-64");
             sidebar.classList.toggle("w-20");
+            sidebar.classList.toggle("sidebar-collapsed");
 
             // Alternar la visibilidad del texto en el sidebar
             sidebarTexts.forEach(span => {
                 span.classList.toggle("hidden");
-                span.classList.toggle("opacity-0");
             });
 
             // Accesibilidad
