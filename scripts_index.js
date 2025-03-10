@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
     const toggleSidebarBtn = document.getElementById("toggleSidebar");
-
+    const sidebarTexts = document.querySelectorAll(".sidebar-text");
     if (toggleSidebarBtn) {
         toggleSidebarBtn.addEventListener("click", function () {
             sidebar.classList.toggle("w-64");
