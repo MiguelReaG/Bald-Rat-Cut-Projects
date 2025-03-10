@@ -1,0 +1,33 @@
+<div class="bg-white rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-semibold mb-4">Proyectos</h2>
+    <p>Bienvenido a la sección de proyectos. Aquí puedes gestionar y visualizar tus proyectos.</p>
+    
+    <!-- Lista de proyectos -->
+    <div class="mt-4">
+        <h3 class="text-xl font-semibold mb-2">Mis Proyectos</h3>
+        <ul id="project-list" class="space-y-2">
+            <li class="p-3 bg-gray-100 rounded-md shadow">Proyecto 1</li>
+            <li class="p-3 bg-gray-100 rounded-md shadow">Proyecto 2</li>
+            <li class="p-3 bg-gray-100 rounded-md shadow">Proyecto 3</li>
+        </ul>
+    </div>
+    
+    <!-- Formulario para agregar proyectos -->
+    <div class="mt-6">
+        <h3 class="text-xl font-semibold mb-2">Agregar Nuevo Proyecto</h3>
+        <input id="project-name" type="text" class="p-2 border rounded-md w-full" placeholder="Nombre del proyecto">
+        <button id="add-project" class="mt-2 bg-blue-500 text-white p-2 rounded-md">Agregar</button>
+    </div>
+</div>
+<script>
+    document.getElementById("add-project").addEventListener("click", function() {
+        const projectName = document.getElementById("project-name").value.trim();
+        if (projectName === "") return;
+
+        const newProject = document.createElement("li");
+        newProject.classList.add("p-3", "bg-gray-100", "rounded-md", "shadow");
+        newProject.innerText = projectName;
+        document.getElementById("project-list").appendChild(newProject);
+        document.getElementById("project-name").value = "";
+    });
+</script>
