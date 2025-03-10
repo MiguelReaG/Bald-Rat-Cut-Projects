@@ -1,73 +1,52 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postulaciones | Bald Rat Cut Projects</title>
+<div id="postulaciones" class="postulaciones-container">
+    <h2 class="text-2xl font-semibold mb-4">Postulaciones</h2>
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="styles_postulaciones.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-</head>
-<body>
-
-    <div id="postulaciones" class="postulaciones-container">
-        <h2 class="text-2xl font-semibold mb-4">Postulaciones</h2>
-
-        <!-- Botón para agregar nueva postulación -->
-        <div class="flex justify-end mb-4">
-            <button id="newPostulation" class="new-postulation-btn">
-                <i class="fas fa-plus mr-2"></i> Nueva Postulación
-            </button>
-        </div>
-
-        <!-- Tabla de postulaciones -->
-        <div class="overflow-x-auto">
-            <table class="postulaciones-table">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Cargo</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="postulacionesBody">
-                    <tr>
-                        <td>Juan Pérez</td>
-                        <td>Desarrollador</td>
-                        <td class="estado-aprobado">Aprobado</td>
-                        <td class="text-center">
-                            <button class="edit-btn action-btn" onclick="editarPostulacion(this)">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="delete-btn action-btn" onclick="eliminarPostulacion(this)">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>María López</td>
-                        <td>Diseñadora</td>
-                        <td class="estado-pendiente">Pendiente</td>
-                        <td class="text-center">
-                            <button class="edit-btn action-btn" onclick="editarPostulacion(this)">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="delete-btn action-btn" onclick="eliminarPostulacion(this)">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <!-- Botón para agregar nueva postulación -->
+    <div class="flex justify-end mb-4">
+        <button id="newPostulation" class="new-postulation-btn">
+            <i class="fas fa-plus mr-2"></i> Nueva Postulación
+        </button>
     </div>
 
-    <!-- Scripts -->
-    <script src="scripts_postulaciones.js"></script>
-
-</body>
-</html>
+    <!-- Tabla de postulaciones -->
+    <div class="overflow-x-auto">
+        <table class="postulaciones-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="postulacionesBody">
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>Desarrollador</td>
+                    <td class="estado-aprobado">Aprobado</td>
+                    <td class="text-center">
+                        <button class="edit-btn action-btn" onclick="editarPostulacion(this)">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="delete-btn action-btn" onclick="eliminarPostulacion(this)">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>Diseñadora</td>
+                    <td class="estado-pendiente">Pendiente</td>
+                    <td class="text-center">
+                        <button class="edit-btn action-btn" onclick="editarPostulacion(this)">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="delete-btn action-btn" onclick="eliminarPostulacion(this)">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
