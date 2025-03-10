@@ -2,14 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
     const toggleSidebarBtn = document.getElementById("toggleSidebar");
     const sidebarTexts = document.querySelectorAll(".sidebar-text");
+
     if (toggleSidebarBtn) {
         toggleSidebarBtn.addEventListener("click", function () {
             sidebar.classList.toggle("w-64");
             sidebar.classList.toggle("w-20");
 
             // Alternar la visibilidad del texto en el sidebar
-            document.querySelectorAll(".sidebar-text").forEach(span => {
+            sidebarTexts.forEach(span => {
                 span.classList.toggle("hidden");
+                span.classList.toggle("opacity-0");
             });
 
             // Accesibilidad
