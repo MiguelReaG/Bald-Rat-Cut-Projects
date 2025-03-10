@@ -13,52 +13,45 @@
     <div class="overlay"></div>
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <aside id="sidebar" class="sidebar bg-bone text-gray-800 w-64 min-h-screen flex flex-col transition-all duration-300 shadow-lg">
+        <aside id="sidebar" class="bg-bone text-gray-800 w-64 min-h-screen flex flex-col transition-all duration-300 shadow-lg">
             <div class="p-4">
-                <h2 class="text-xl font-semibold sidebar-text">Menú</h2>
+                <h2 class="text-xl font-semibold">Menú</h2>
             </div>
             <nav class="flex-1">
                 <ul class="space-y-2 py-4">
                     <li>
                         <a href="#" onclick="event.preventDefault(); loadPage('inicio')" class="flex items-center px-4 py-2 hover:bg-gray-300">
-                            <i class="fas fa-home w-6 icon-dark"></i>
-                            <span class="ml-2 sidebar-text">Inicio</span>
+                            <i class="fas fa-home w-6 icon-dark"></i><span class="ml-2">Inicio</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="event.preventDefault(); loadPage('proyectos')" class="flex items-center px-4 py-2 hover:bg-gray-300">
-                            <i class="fas fa-folder w-6 icon-dark"></i>
-                            <span class="ml-2 sidebar-text">Proyectos</span>
+                            <i class="fas fa-folder w-6 icon-dark"></i><span class="ml-2">Proyectos</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="event.preventDefault(); loadPage('chat')" class="flex items-center px-4 py-2 hover:bg-gray-300">
-                            <i class="fas fa-comments w-6 icon-dark"></i>
-                            <span class="ml-2 sidebar-text">Chat y Colaboración</span>
+                            <i class="fas fa-comments w-6 icon-dark"></i><span class="ml-2">Chat y Colaboración</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="event.preventDefault(); loadPage('postulaciones')" class="flex items-center px-4 py-2 hover:bg-gray-300">
-                            <i class="fas fa-file-alt w-6 icon-dark"></i>
-                            <span class="ml-2 sidebar-text">Postulaciones</span>
+                            <i class="fas fa-file-alt w-6 icon-dark"></i><span class="ml-2">Postulaciones</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="event.preventDefault(); loadPage('publicaciones')" class="flex items-center px-4 py-2 hover:bg-gray-300">
-                            <i class="fas fa-newspaper w-6 icon-dark"></i>
-                            <span class="ml-2 sidebar-text">Publicaciones</span>
+                            <i class="fas fa-newspaper w-6 icon-dark"></i><span class="ml-2">Publicaciones</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="event.preventDefault(); loadPage('evaluaciones')" class="flex items-center px-4 py-2 hover:bg-gray-300">
-                            <i class="fas fa-star w-6 icon-dark"></i>
-                            <span class="ml-2 sidebar-text">Evaluaciones</span>
+                            <i class="fas fa-star w-6 icon-dark"></i><span class="ml-2">Evaluaciones</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="event.preventDefault(); loadPage('administracion')" class="flex items-center px-4 py-2 hover:bg-gray-300">
-                            <i class="fas fa-cog w-6 icon-dark"></i>
-                            <span class="ml-2 sidebar-text">Administración</span>
+                            <i class="fas fa-cog w-6 icon-dark"></i><span class="ml-2">Administración</span>
                         </a>
                     </li>
                 </ul>
@@ -67,10 +60,11 @@
                 <i class="fas fa-bars icon-dark"></i>
             </button>
         </aside>
+
         <!-- Contenido Principal -->
         <div class="flex-1 flex flex-col">
             <!-- Header -->
-            <header id="header" class="bg-bone shadow-md flex items-center justify-between px-6 py-4">
+            <header class="bg-bone shadow-md flex items-center justify-between px-6 py-4">
                 <h1 id="page-title" class="text-xl font-semibold">Inicio</h1>
                 <div class="flex items-center space-x-4">
                     <div class="relative">
@@ -103,32 +97,6 @@
     <div id="dynamic-scripts"></div>
 
     <!-- Carga del script principal -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const sidebar = document.getElementById("sidebar");
-        const toggleSidebarBtn = document.getElementById("toggleSidebar");
-        const sidebarTexts = document.querySelectorAll(".sidebar-text");
-        const header = document.getElementById("header");
-        const mainContent = document.getElementById("main-content");
-    
-        toggleSidebarBtn.addEventListener("click", function () {
-            sidebar.classList.toggle("collapsed");
-    
-            // Ocultar/mostrar todos los textos del sidebar
-            sidebarTexts.forEach(span => {
-                span.classList.toggle("hidden");
-            });
-    
-            // Ajustar la posición del header y contenido principal
-            if (sidebar.classList.contains("collapsed")) {
-                header.classList.add("sidebar-collapsed");
-                mainContent.classList.add("sidebar-collapsed");
-            } else {
-                header.classList.remove("sidebar-collapsed");
-                mainContent.classList.remove("sidebar-collapsed");
-            }
-        });
-});
-    </script>
+    <script src="scripts_index.js"></script>
 </body>
 </html>
