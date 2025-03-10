@@ -20,14 +20,17 @@ body {
     bottom: 0;
 }
 
+/* Cuando el Sidebar está colapsado */
 .sidebar.collapsed {
-    width: 60px;
+    width: 60px !important;
 }
 
-/* Ocultar texto cuando el sidebar está colapsado */
+/* Ocultar texto cuando el Sidebar está colapsado */
 .sidebar.collapsed .sidebar-text {
     display: none !important; /* Se oculta completamente */
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
 /* Estilos de los botones del Sidebar */
@@ -61,8 +64,9 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Aumentar tamaño de los íconos al colapsar el Sidebar */
 .sidebar.collapsed ul li i {
-    transform: scale(1.2); /* Aumentar tamaño para mejor visibilidad */
+    transform: scale(1.2);
 }
 
 /* Hover con fondo dorado translúcido */
@@ -88,6 +92,7 @@ body {
     transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
+/* Ajustar el Navbar cuando el Sidebar está colapsado */
 .header.sidebar-collapsed {
     width: calc(100% - 60px);
     left: 60px;
@@ -105,6 +110,7 @@ body {
     font-size: 18px;
 }
 
+/* Hover del botón de colapsar */
 #toggleSidebar:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -115,6 +121,7 @@ body {
     font-size: 18px;
 }
 
+/* Cambio de color al pasar el mouse */
 .header .icon-dark:hover {
     color: #FFFFFF; /* Blanco al pasar el mouse */
 }
@@ -130,6 +137,7 @@ body {
     color: #142C47; /* Azul oscuro */
 }
 
+/* Ajustar el contenido cuando el Sidebar está colapsado */
 .main-content.sidebar-collapsed {
     margin-left: 60px;
     width: calc(100% - 60px);
