@@ -95,3 +95,14 @@ body {
     margin-left: 60px;
     width: calc(100% - 60px);
 }
+#sidebar {
+    transition: width 0.3s ease-in-out;
+}
+
+#sidebar .sidebar-text {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#sidebar.w-20 .sidebar-text {
+    display: none; /* Oculta completamente el texto */
+}
