@@ -1,0 +1,81 @@
+/* ------------------- Estilos Generales ------------------- */
+#publicaciones {
+    display: none; /* Se oculta por defecto hasta ser activado */
+}
+
+.publicaciones-container {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+/* ------------------- Botón Nueva Publicación ------------------- */
+.new-publication-btn {
+    background-color: #2A9D8F; /* Azul tecnológico */
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.new-publication-btn:hover {
+    background-color: #1B3C59; /* Azul oscuro */
+    transform: scale(1.05);
+}
+
+/* ------------------- Tabla de Publicaciones ------------------- */
+.publicaciones-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.publicaciones-table th {
+    background-color: #1B3C59; /* Azul Oscuro */
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #2A9D8F; /* Azul Tecnológico */
+}
+
+.publicaciones-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover sobre filas */
+.publicaciones-table tr:hover {
+    background-color: rgba(42, 157, 143, 0.1);
+}
+
+/* ------------------- Botones de Acción ------------------- */
+.action-btn {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.action-btn:hover {
+    transform: scale(1.2);
+}
+
+.edit-btn {
+    color: #2A9D8F; /* Azul Tecnológico */
+}
+
+.delete-btn {
+    color: #E53935; /* Rojo para eliminar */
+}
+
+/* ------------------- Responsividad ------------------- */
+@media screen and (max-width: 768px) {
+    .publicaciones-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

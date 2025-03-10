@@ -1,0 +1,52 @@
+<div id="publicaciones" class="publicaciones-container">
+    <h2 class="text-2xl font-semibold mb-4">Publicaciones</h2>
+
+    <!-- Botón para agregar nueva publicación -->
+    <div class="flex justify-end mb-4">
+        <button id="newPublication" class="new-publication-btn">
+            <i class="fas fa-plus mr-2"></i> Nueva Publicación
+        </button>
+    </div>
+
+    <!-- Lista de publicaciones -->
+    <div class="overflow-x-auto">
+        <table class="publicaciones-table">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="publicacionesBody">
+                <tr>
+                    <td>Introducción a la Ciberseguridad</td>
+                    <td>Juan Pérez</td>
+                    <td>05/03/2025</td>
+                    <td class="text-center">
+                        <button class="edit-btn action-btn" onclick="editarPublicacion(this)">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="delete-btn action-btn" onclick="eliminarPublicacion(this)">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mejores prácticas en redes</td>
+                    <td>María López</td>
+                    <td>02/03/2025</td>
+                    <td class="text-center">
+                        <button class="edit-btn action-btn" onclick="editarPublicacion(this)">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="delete-btn action-btn" onclick="eliminarPublicacion(this)">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
