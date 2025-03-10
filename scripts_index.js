@@ -1,25 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.getElementById("sidebar");
-    const toggleSidebarBtn = document.getElementById("toggleSidebar");
-    const sidebarTexts = document.querySelectorAll(".sidebar-text");
-
-    if (toggleSidebarBtn) {
-        toggleSidebarBtn.addEventListener("click", function () {
-            sidebar.classList.toggle("w-64");
-            sidebar.classList.toggle("w-20");
-            sidebar.classList.toggle("sidebar-collapsed");
-
-            // Alternar la visibilidad del texto en el sidebar
-            sidebarTexts.forEach(span => {
-                span.classList.toggle("hidden");
-            });
-
-            // Accesibilidad
-            const isExpanded = sidebar.classList.contains("w-64");
-            sidebar.setAttribute("aria-expanded", isExpanded);
+        document.getElementById('toggleSidebar').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('w-64');
+            sidebar.classList.toggle('w-20');
+            
+            // Toggle visibility of text in sidebar
+            const spans = sidebar.getElementsByTagName('span');
+            for (let span of spans) {
+                span.classList.toggle('hidden');
+            }
         });
-    }
-});
 
 // Función para cargar dinámicamente las secciones dentro del index.html
 async function loadPage(page) {
