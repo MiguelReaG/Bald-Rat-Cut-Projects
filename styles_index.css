@@ -1,15 +1,15 @@
 /* ------------------- Estilos generales ------------------- */
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #F1F1F1; /* Fondo claro */
-    background-image: url('logo.png');
-    background-size: contain;
-    background-position: bottom 5% center;
-    background-repeat: no-repeat;
+    background-color: #0D0D0D; /* Negro Profundo */
+    color: #E0E0E0; /* Gris Claro */
+    margin: 0;
+    padding: 0;
 }
 
+/* Fondo con un ligero efecto de degradado */
 .overlay {
-    background-color: rgba(241, 241, 241, 0.8); /* Fondo claro con opacidad */
+    background: linear-gradient(135deg, rgba(13, 13, 13, 0.95) 0%, rgba(26, 26, 26, 0.85) 100%);
     position: absolute;
     top: 0;
     left: 0;
@@ -18,50 +18,61 @@ body {
     z-index: -1;
 }
 
-.bg-bone {
-    background-color: #2A9D8F; /* Azul tecnológico */
+/* Colores de la interfaz */
+.bg-primary {
+    background-color: #1B1B1B; /* Negro Industrial */
 }
 
-.icon-dark {
-    color: #1B3C59; /* Azul oscuro */
+.text-highlight {
+    color: #00E5FF; /* Azul Neón */
 }
 
 /* ------------------- Sidebar ------------------- */
 .sidebar {
-    width: 250px;
+    width: 260px;
     transition: width 0.3s ease-in-out;
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
     min-height: 100vh;
+    background: rgba(26, 26, 26, 0.9); /* Negro Semi-transparente */
+    backdrop-filter: blur(10px); /* Glassmorphism */
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
     overflow-x: hidden;
-    background-color: #1B3C59; /* Azul Oscuro Profesional */
 }
 
 .sidebar.collapsed {
-    width: 60px;
+    width: 70px;
+}
+
+/* Elementos del menú */
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .sidebar ul li {
-    padding: 15px 20px;
+    padding: 15px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    transition: background 0.3s;
+    gap: 15px;
+    transition: background 0.3s, transform 0.2s;
     cursor: pointer;
-    color: #FFFFFF; /* Texto en blanco */
+    color: #E0E0E0; /* Texto Gris Claro */
 }
 
 .sidebar ul li i {
-    color: #000000; /* Verde CUTonala */
+    color: #00E5FF; /* Azul Neón */
 }
 
 .sidebar ul li:hover {
-    background-color: rgba(76, 175, 80, 0.3); /* Verde translúcido */
+    background: rgba(0, 229, 255, 0.1); /* Efecto translúcido */
+    transform: scale(1.05);
 }
 
 /* ------------------- Header ------------------- */
 .header {
-    background-color: #000000; /* Azul Tecnológico */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgba(15, 15, 15, 0.9); /* Negro Profundo con transparencia */
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     padding: 15px 20px;
     width: 100%;
     position: fixed;
@@ -69,38 +80,71 @@ body {
     left: 0;
     height: 60px;
     z-index: 1000;
-    color: white;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* ------------------- Notificaciones ------------------- */
 .notification-btn {
     position: relative;
+    cursor: pointer;
 }
 
 .badge {
-    background: #4CAF50; /* Verde CUTonala */
+    background: #FF007F; /* Rosa Neón */
     color: white;
     border-radius: 50%;
-    padding: 3px 7px;
+    padding: 4px 8px;
     font-size: 0.8em;
     position: absolute;
     top: -5px;
     right: -5px;
-    display: none;
 }
 
 /* ------------------- Contenido Principal ------------------- */
 .main-content {
-    margin-left: 250px;
+    margin-left: 260px;
     padding: 80px 20px;
-    width: calc(100% - 250px);
+    width: calc(100% - 260px);
     min-height: 100vh;
     transition: margin-left 0.3s ease-in-out;
-    background-color: #F1F1F1; /* Fondo claro */
-    color: #1B3C59; /* Azul oscuro */
+    background: #0D0D0D; /* Negro Profundo */
+    color: #E0E0E0; /* Texto Claro */
 }
 
 .main-content.sidebar-collapsed {
-    margin-left: 60px;
-    width: calc(100% - 60px);
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+/* ------------------- Botones ------------------- */
+.button {
+    background: #00E5FF; /* Azul Neón */
+    color: #0D0D0D;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #009ACD; /* Azul más oscuro */
+    transform: scale(1.05);
+}
+
+/* ------------------- Footer ------------------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(15, 15, 15, 0.9);
+    color: #E0E0E0;
+    font-size: 0.9em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
