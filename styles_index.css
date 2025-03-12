@@ -56,17 +56,18 @@ body {
     gap: 15px;
     transition: background 0.3s, transform 0.2s;
     cursor: pointer;
-    color: #E0E0E0; /* Texto Gris Claro */
+    color: #E0E0E0 !important; /* Asegura que el texto sea visible */
 }
 
 .sidebar ul li i {
-    color: #00E5FF; /* Azul Neón */
+    color: #00E5FF; /* Azul Neón para iconos */
 }
 
 .sidebar ul li:hover {
-    background: rgba(0, 229, 255, 0.1); /* Efecto translúcido */
+    background: rgba(0, 229, 255, 0.2); /* Fondo translúcido al pasar el cursor */
     transform: scale(1.05);
 }
+
 
 /* ------------------- Header ------------------- */
 .header {
